@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{multirow,array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{epsf,epsfig,epic,eepic}
+\usepackage{graphicx}
+\begin{document}
+
+\section*{Grim Trigger Strategy}
+Teams play weak lines until one defects and plays a strong line. After that, both teams play strong lines from then on. Let's show that in the repeated game setting this strategy can give us efficiency in subgame perfect equilibrium.
+
+\section{Other team following strategy and no strong lines yet...}
+In this set up, the other team will always play a weak line as long as we (as the other team) do so as well.
+
+So, if we follow strategy our payoff is the following with discounting of $\delta$ as discount factor:
+
+$$1+\delta+\delta^2+...=\frac{1}{1-\delta}$$
+
+If we choose to play a strong line instead, then the flow of payoffs will be:
+$$2-\delta-\delta^2+...=\frac{-1}{1-\delta}+3$$
+
+We will choose to continue to play weak lines if $\frac{1}{1-\delta}>\frac{-1}{1-\delta}+3 \Rightarrow \delta>\frac{1}{3}$
+
+
+\section{Other team following strategy and there has been a strong line...}
+In this set up, the other team will always play a strong line since a strong line has been played.
+
+So, if we follow the strategy (play strong in response) our payoff is:
+
+$$-1-\delta-\delta^2+...=\frac{-1}{1-\delta}$$
+
+If we choose to play a weak line at any time period, the sum total of the flow payoffs will be lower since we will receive -2 in that period instead of -1. So, we don't gain from deviating from the specified strategy. (We will play strong from now on.)
+
+\bigskip
+\underline{Thus, if $\delta>\frac{1}{3}$, this strategy is a subgame perfect equilibrium!}
+
+\end{document}
